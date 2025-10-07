@@ -1,2 +1,2 @@
-const backend_url = "http://localhost:8000";
+const backend_url = "https://bookswap-market-place.onrender.com";
 export default backend_url;
