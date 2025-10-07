@@ -9,7 +9,13 @@ import requestRoutes from './routes/requestRoutes.js';
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://bookswap-market-place-1.onrender.com", // your deployed frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // allow cookies or auth headers if needed
+  })
+);
 
 connectDB();
 app.get("/",(req,res)=>{
